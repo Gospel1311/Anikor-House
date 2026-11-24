@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #222;
+  background: #faf9f6;
+}
+
+header {
+  min-height: 85px;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e5df;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a,
+header a {
+  text-decoration: none;
+  color: #222;
+  font-size: 13px;
+}
+
+.nav-button {
+  border: 1px solid #222;
+  padding: 12px 20px;
+}
+
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  background: #efede7;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  color: #777;
+}
+
+.hero h1,
+.intro h2,
+.books h2,
+.author h2,
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.12;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  max-width: 470px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  padding: 15px 24px;
+  font-size: 13px;
+}
+
+.intro,
+.books,
+.author,
+.contact {
+  padding: 100px 10%;
+}
+
+.intro {
+  max-width: 850px;
+}
+
+.intro h2,
+.books h2,
+.author h2,
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 22px;
+}
+
+.intro > p:last-child,
+.author > p:last-child,
+.contact > p {
+  max-width: 600px;
+  color: #666;
+  line-height: 1.9;
+}
+
+.books {
+  background: #f0eee8;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+.book-cover {
+  height: 280px;
+  padding: 25px;
+  background: #292929;
+  color: #f8f5ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.book-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 18px;
+}
+
+.book-card p {
+  font-size: 12px;
+  color: #777;
+  margin-top: 8px;
+}
+
+.author {
+  text-align: center;
+}
+
+.author > p:last-child {
+  margin: 0 auto;
+}
+
+.contact {
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+.contact .eyebrow,
+.contact > p {
+  color: #c3c3c3;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 28px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 7px;
+  font-size: 13px;
+}
+
+footer {
+  padding: 25px 7%;
+  background: #171717;
+  color: #aaa;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 70px 7%;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro,
+  .books,
+  .author,
+  .contact {
+    padding: 70px 7%;
+  }
+
+  .intro h2,
+  .books h2,
+  .author h2,
+  .contact h2 {
+    font-size: 34px;
+  }
+
+  .book-cover {
+    height: 330px;
+  }
+}
